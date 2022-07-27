@@ -1,0 +1,65 @@
+
+.home {
+  margin: auto 40px;
+  color: white;
+  font-weight: bold;
+}
+
+#intro {
+  position: relative;
+  height: 95vh;
+  background-image: url(../../assets/home.svg);
+  /* Full height */
+  /*height: 100%;*/
+  /* Center and scale the image nicely */
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+
+.name {
+  font-size: 72.5px;
+  font-weight: bold;
+}
+
+.hello {
+  font-family: fantasy;
+  font-size: 115.5px;
+  color: #00ff66;
+}
+
+h1.opening {
+  position: absolute;
+  left: 15px;
+  color: white;
+}
+
+h1.closing {
+  position: absolute;
+  bottom: 25px;
+  right: 15px;
+  color: white;
+}
+
+@media(max-width: 800px) {
+  .name {
+    font-size: 47.5px;
+    font-weight: bold;
+  }
+
+  .hello {
+    font-family: fantasy;
+    font-size: 71.5px;
+    color: #00ff66;
+  }
+}
+
+.btn-success {
+  color: #010c31;
+  background-color: #00ff66;
+}
+
+  .btn-success:hover {
+    color: #00ff66;
+    background-color: #010c31;
+  }

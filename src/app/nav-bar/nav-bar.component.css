@@ -1,0 +1,61 @@
+.logo {
+  width: 80px;
+  height: 45px;
+}
+
+.navbar {
+  background-blend-mode: color-burn;
+  background-color: #9ecda4a3;
+  padding: 0;
+}
+
+  .navbar .navbar-collapse {
+    text-align: inherit;
+  }
+
+#navbarNav {
+  padding: 10px;
+}
+
+.navbar-brand {
+  margin-left: 45px;
+  color: green;
+}
+
+.navbar-toggler {
+  margin-right: 45px;
+  color: black;
+}
+
+.navbar-nav {
+  margin-right: 45px;
+}
+
+.nav-link {
+  color: #010c31;
+  padding: 8px 16px 8px;
+}
+
+  .nav-link:hover {
+    color: #05c648;
+  }
+
+  .nav-link:active {
+    color: green;
+  }
+
+.btn {
+  margin-right: 50px;
+}
+
+  .btn:focus, .navbar-toggler {
+    box-shadow: none !important;
+  }
+
+/*@media(mix-width: 700px) {
+  .navbar {
+    background-blend-mode: color-burn;
+    background-color: #9ecda4a3;
+    padding: 0;
+  }
+}*/

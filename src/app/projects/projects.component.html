@@ -1,0 +1,102 @@
+
+<section class="container projects" id="projects">
+  <h4 class="title text-center">/my projects</h4>
+
+  <ul class="nav justify-content-center">
+    <li class="nav-item">
+      <a class="nav-link" href="#all" data-bs-toggle="tab">All</a>
+    </li>
+    <li class="nav-item">
+      <a class="nav-link" href="#back-end" data-bs-toggle="tab">Back-End</a>
+    </li>
+    <li class="nav-item">
+      <a class="nav-link" href="#front-end" data-bs-toggle="tab">Front-End</a>
+    </li>
+    <li class="nav-item">
+      <a class="nav-link" href="#mobile" data-bs-toggle="tab">Mobile</a>
+    </li>
+  </ul>
+
+  <div class="tab-content">
+    <div class="tab-pane fade show active" id="all" role="tabpanel" aria-labelledby="all-tab" tabindex="0">
+      <div class="container">
+        <div class="row row-cols-1 row-cols-lg-2 g-3 g-lg-3">
+          <ng-container *ngFor="let project of projects">
+            <div class="column">
+              <div class="card">
+                <div class="card-header">
+                  {{project.languages}}
+                </div>
+                <div class="card-body">
+                  <h4 class="card-title">{{project.name}}</h4>
+                  <p class="card-text">{{project.description}}</p>
+                  <div class="icon"><a [href]="project.link" [target]="'_blank'" title="github"><fa-icon [icon]="faGitHub"></fa-icon></a><a [href]="project.externalLink" [target]="'_black'" title="external-link"><fa-icon [icon]="faExternal"></fa-icon></a></div>
+                </div>
+              </div>
+            </div>
+          </ng-container>
+        </div>
+      </div>
+    </div>
+    <div class="tab-pane fade show" id="back-end" role="tabpanel" aria-labelledby="back-end-tab" tabindex="1">
+      <div class="container">
+        <div class="row row-cols-1 row-cols-lg-2 g-3 g-lg-3">
+          <ng-container>
+            <div class="column" *ngFor="let backend of back">
+              <div class="card">
+                <div class="card-header">
+                  {{backend.languages}}
+                </div>
+                <div class="card-body">
+                  <h5 class="card-title">{{backend.name}}</h5>
+                  <p class="card-text">{{backend.description}}</p>
+                  <div class="icon"><a [href]="backend.link" [target]="'_blank'"><fa-icon [icon]="faGitHub"></fa-icon></a><a [href]="backend.externalLink" [target]="'_black'" aria-label="gitHub"><fa-icon [icon]="faExternal"></fa-icon></a></div>
+                </div>
+              </div>
+            </div>
+          </ng-container>
+        </div>
+      </div>
+    </div>
+    <div class="tab-pane fade show" id="front-end" role="tabpanel" aria-labelledby="web-tab" tabindex="2">
+      <div class="container">
+        <div class="row row-cols-1 row-cols-lg-2 g-3 g-lg-3">
+          <ng-container *ngIf="!front">
+            <div class="column" *ngFor="let frontend of front">
+              <div class="card">
+                <div class="card-header">
+                  {{frontend.languages}}
+                </div>
+                <div class="card-body">
+                  <h5 class="card-title">{{frontend.name}}</h5>
+                  <p class="card-text">{{frontend.description}}</p>
+                  <div class="icon"><a [href]="frontend.link" [target]="'_blank'"><fa-icon [icon]="faGitHub"></fa-icon></a><a [href]="frontend.externalLink" [target]="'_black'" aria-label="gitHub"><fa-icon [icon]="faExternal"></fa-icon></a></div>
+                </div>
+              </div>
+            </div>
+          </ng-container>
+        </div>
+      </div>
+    </div>
+    <div class="tab-pane fade" id="mobile" role="tabpanel" aria-labelledby="mobile-tab" tabindex="3">
+      <div class="container">
+        <div class="row row-cols-1 row-cols-lg-2 g-3 g-lg-3">
+          <ng-container *ngIf="!mobile">
+            <div class="column" *ngFor="let mobi of mobile">
+              <div class="card">
+                <div class="card-header">
+                  {{mobi.languages}}
+                </div>
+                <div class="card-body">
+                  <h5 class="card-title">{{mobi.name}}</h5>
+                  <p class="card-text">{{mobi.description}}</p>
+                  <div class="icon"><a [href]="mobi.link" [target]="'_blank'"><fa-icon [icon]="faGitHub"></fa-icon></a><a [href]="mobi.externalLink" [target]="'_black'" aria-label="gitHub"><fa-icon [icon]="faExternal"></fa-icon></a></div>
+                </div>
+              </div>
+            </div>
+          </ng-container>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>

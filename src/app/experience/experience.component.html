@@ -1,0 +1,20 @@
+
+<section id="experience">
+  <h4 class="title text-center">/experience</h4>
+  <div class="timeline" *ngIf="experience">
+    <ul>
+      <li *ngFor="let exp of experience">
+        <div class="dot"></div>
+        <div class="time">
+          <h4>{{exp.startYear+" - " + exp.endYear}}</h4>
+        </div>
+        <div class="content">
+          <h3>{{exp.name}}</h3>
+          <span>{{exp.title}}</span>
+          <p>{{exp.description}}</p>
+        </div>
+      </li>
+    </ul>
+    <p *ngIf="errorMessage">{{errorMessage!.status +" "+ errorMessage!.statusText}}</p>
+  </div>
+</section>

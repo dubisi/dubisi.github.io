@@ -1,1 +1,144 @@
 /* You can add global styles to this file, and also import other style files */
+@import "~bootstrap/dist/css/bootstrap.css";
+@import url('https://fonts.googleapis.com/css2?family=Roboto&family=Roboto+Condensed&family=Roboto+Mono&display=swap');
+
+html {
+  scroll-behavior: smooth;
+}
+
+/*#9ecda4a3*/
+body {
+  background-color: #77cd82a3;
+  /*#77cd82a3;*/
+  font-family: 'Roboto', sans-serif;
+}
+
+
+
+section {
+  min-height: 100vh;
+}
+
+.title {
+  padding-top: 100px;
+}
+
+
+.timeline {
+  min-height: 100vh;
+  padding: 100px 15px 0;
+}
+
+
+  .timeline ul {
+    max-width: 1000px;
+    margin: auto;
+    display: flex;
+    flex-wrap: wrap;
+    position: relative;
+    padding-left: 0;
+  }
+
+    .timeline ul::before {
+      content: '';
+      position: absolute;
+      width: 2px;
+      height: 100%;
+      background-color: #2f363e;
+      left: calc(50% - 16px);
+    }
+
+    .timeline ul li {
+      list-style: none;
+      margin-bottom: 40px;
+      width: 100%;
+      position: relative;
+    }
+
+      .timeline ul li:last-child {
+        margin-bottom: 0;
+      }
+
+      .timeline ul li:nth-child(odd) {
+        padding-right: calc(50% + 30px);
+        text-align: right;
+      }
+
+      .timeline ul li:nth-child(even) {
+        padding-left: calc(50% - 2px);
+      }
+
+.dot {
+  width: 20px;
+  height: 20px;
+  background: #00ff66;
+  border-radius: 50%;
+  box-shadow: 0 0 0 3px rgb(3 6 42 / 20%);
+  position: absolute;
+  left: calc(50% - 25px);
+}
+
+.content {
+  background-color: #00ff66;
+  /*#05c648;*/
+  padding: 30px;
+  border-radius: 5px;
+  box-shadow: 0px 4px 4px rgb(0 0 0 / 25%);
+}
+
+
+
+.timeline ul li h3 {
+  color: #010c31;
+  margin: 0 0 10px;
+  text-transform: capitalize;
+}
+
+.timeline ul li p {
+  color: #010c31;
+  font-size: 14.5px;
+}
+
+.timeline ul li h4 {
+  margin: 0;
+  padding: 0;
+  font-size: 15.6px;
+}
+
+.time {
+  font-size: 18px;
+  color: #050609;
+  margin: 25px 0 25px;
+}
+
+@media(max-width: 767px) {
+  .timeline ul::before {
+    left: 7px;
+  }
+
+  .timeline ul li:nth-child(odd) {
+    padding-right: 0;
+    text-align: left;
+  }
+
+  .timeline ul li:nth-child(odd),
+  .timeline ul li:nth-child(even) {
+    padding-left: 32px;
+  }
+
+  .dot {
+    left: -2px;
+  }
+}
+
+.btn-dark {
+  color: #00ff66;
+  background-color: #010c31;
+  border-color: #010c31;
+}
+
+  .btn-dark:hover {
+    color: #010c31;
+    background-color: #00ff66;
+    border-color: #00ff66;
+  }

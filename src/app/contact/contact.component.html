@@ -1,0 +1,52 @@
+
+<section class="d-flex" id="contact">
+  <div class="container contact">
+    <div class="item1">
+      <div class="links">
+        <ul>
+          <li><h2>Contact Me</h2></li>
+          <ng-container *ngFor="let contact of contacts">
+            <li *ngIf="contact.name === 'address'" class="address">
+              <fa-icon [icon]="faLocation"></fa-icon> {{contact.link}}
+            </li>
+            <li *ngIf="contact.name === 'phone'" class="phone">
+              <fa-icon [icon]="faPhoneFlip"></fa-icon>  {{contact.link}}
+            </li>
+          </ng-container>
+          <li class="social"><a *ngIf="twitter() !== ''" [href]="twitter()" aria-label="Twitter button"><fa-icon [icon]="faTwitter"></fa-icon></a><a *ngIf="linkedIn() !== ''" [href]="linkedIn()" [target]="'_blank'" aria-label="Linkedin button"><fa-icon [icon]="faLinkedIn"></fa-icon></a><a *ngIf="gitHub() !== ''" [href]="gitHub()" [target]="'_blank'" aria-label="Git-Hub button"><fa-icon [icon]="faGitHub"></fa-icon></a><a *ngIf="gitLab() !== ''" [href]="gitLab()" aria-label="Git-Lab button"><fa-icon [icon]="faGitLab"></fa-icon></a></li>
+        </ul>
+      </div>
+    </div>
+
+    <div class="item2">
+      <div class="mail">
+        <h1>Get in Touch</h1>
+        <p>Got something on your mind?</p>
+        <a type="button" class="btn btn-outline-success" href="mailto:dubisi265@gmail.com">Say Hello</a>
+      </div>
+    </div>
+  </div>
+
+  <div class="container contact1">
+    <div class="mail1">
+      <h1>Get in Touch</h1>
+      <p>Got something on your mind?</p>
+      <a type="button" class="btn btn-outline-success" href="mailto:dubisi265@gmail.com">Say Hello</a>
+    </div>
+
+    <div class="links1">
+      <ul>
+        <ng-container *ngFor="let contact of contacts">
+          <li *ngIf="contact.name === 'address'">
+            <ul><li><fa-icon [icon]="faLocation"></fa-icon></li><li>{{contact.link}}</li></ul>
+          </li>
+
+          <li *ngIf="contact.name === 'phone'">
+            <ul><li><fa-icon [icon]="faPhoneFlip"></fa-icon></li><li>{{contact.link}}</li></ul>
+        </ng-container>
+        <li class="social"><a *ngIf="twitter() !== ''" [href]="twitter()" aria-label="Twitter button"><fa-icon [icon]="faTwitter"></fa-icon></a><a *ngIf="linkedIn() !== ''" [href]="linkedIn()" [target]="'_blank'" aria-label="Linkedin button"><fa-icon [icon]="faLinkedIn"></fa-icon></a><a *ngIf="gitHub() !== ''" [href]="gitHub()" [target]="'_blank'" aria-label="Git-Hub button"><fa-icon [icon]="faGitHub"></fa-icon></a><a *ngIf="gitLab() !== ''" [href]="gitLab()" aria-label="Git-Lab button"><fa-icon [icon]="faGitLab"></fa-icon></a></li>
+      </ul>
+    </div>
+  </div>
+
+</section>

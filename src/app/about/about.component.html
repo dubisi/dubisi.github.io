@@ -1,0 +1,30 @@
+
+<section id="about">
+  <h4 class="title text-center">/about</h4>
+
+  <div class="container p-4">
+    <div class="row row-cols-md-2 justify-content-center" *ngIf="about">
+      <div class="col-lg-3 col-lg-4">
+        <div class="profile"><div class="frame"></div><img [src]="path+about.imagePath" class="img-fluid" alt="User profile picture" /></div>
+      </div>
+
+      <div class="col-lg-4 col-lg-5">
+        <div class="content-about">
+          <h3>Hi,</h3>
+          <p>{{about.aboutMe}}</p>
+          <a class="btn btn-dark" [href]="cv+ about.resume" download="Demaind_Ubisi_CV.pdf">
+            Download CV
+          </a>
+        </div>
+      </div>
+    </div>
+    <p *ngIf="errorMessage">{{errorMessage!.status +" "+ errorMessage!.statusText}}</p>
+  </div>
+</section>
+
+<!--#54a546 / ti
+#9ecda4a3 /bg
+#f0ffff /text
+#39a81c /dot
+
+#cdfacd / card body-->
