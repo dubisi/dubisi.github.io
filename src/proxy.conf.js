@@ -3,7 +3,7 @@ const PROXY_CONFIG = [
     context: [
       "/api/profile/",
     ],
-    target: "https://localhost:7105",
+    target: "https://demaind-profile.azurewebsites.net",
     secure: false,
     changeOrigin: true,
   }
