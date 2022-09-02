@@ -17,7 +17,7 @@ export class HttpService {
   }
 
   getAbout(id: number) {
-    return this.http.get<About>(`api/profile/about/${id}`);
+    return this.http.get<About[]>(`api/profile/about/${id}`);
 
   }
 

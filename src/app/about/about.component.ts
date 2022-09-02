@@ -12,7 +12,7 @@ import { HttpService } from '../http.service';
 export class AboutComponent implements OnInit {
 
   person: Person = person;
-  about: About | undefined;
+  about!: About | undefined;
   path: string = "../assets/";
   cv: string = "../assets/";
   errorMessage: any | HttpErrorResponse | undefined;
@@ -21,7 +21,7 @@ export class AboutComponent implements OnInit {
 
 
   ngOnInit(): void {
-    this.http.getAbout(person.id).subscribe((data: About) => this.about = data, error => {
+    this.http.getAbout(person.id).subscribe((data: About[]) => this.about = data[0], error => {
       retry(3),
         this.errorMessage = error;
     });
