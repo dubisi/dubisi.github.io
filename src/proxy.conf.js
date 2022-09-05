@@ -3,8 +3,11 @@ const PROXY_CONFIG = [
     context: [
       "/api/profile/",
     ],
-    target: "https://demaind-profile.azurewebsites.net/",
-    secure: false,
+    target: "https://demaind-profile.azurewebsites.net",
+    secure: true,
+    pathRewrite: {
+      "^/api/profile/": "/api/profile/"
+    },
     changeOrigin: true,
   }
 ]

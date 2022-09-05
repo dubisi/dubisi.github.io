@@ -14,7 +14,7 @@ export class AboutComponent implements OnInit {
   person: Person = person;
   about!: About | undefined;
   path: string = "../assets/";
-  cv: string = "../assets/";
+  cv: string = "../assets/Cv.pdf";
   errorMessage: any | HttpErrorResponse | undefined;
 
   constructor(private http: HttpService) { }

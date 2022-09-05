@@ -1,0 +1,17 @@
+{
+  "hosting": {
+    "site": "dubisi-1dcfa",
+    "public": "dist/profile-ui",
+    "ignore": [
+      "firebase.json",
+      "**/.*",
+      "**/node_modules/**"
+    ],
+    "rewrites": [
+      {
+        "source": "**",
+        "destination": "/index.html"
+      }
+    ]
+  }
+}
