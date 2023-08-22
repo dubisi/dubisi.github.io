@@ -1,20 +1,31 @@
 
 <section id="experience">
   <h4 class="title text-center">/experience</h4>
-  <div class="timeline" *ngIf="experience">
+
+  <div class="timeline">
     <ul>
-      <li *ngFor="let exp of experience">
+      <li>
         <div class="dot"></div>
         <div class="time">
-          <h4>{{exp.startYear+" - " + exp.endYear}}</h4>
+          <h4>May 2021 - Aug 2021</h4>
         </div>
         <div class="content">
-          <h3>{{exp.name}}</h3>
-          <span>{{exp.title}}</span>
-          <p>{{exp.description}}</p>
+          <h3>Africa Drone Kings</h3>
+          <span>Back-end developer, Intern</span>
+          <p>Created a web back-end services, Integrated third-party RESTful APIs, I was part of a three-person team, Done using PHP and MySQL database services.</p>
+        </div>
+      </li>
+      <li>
+        <div class="dot"></div>
+        <div class="time">
+          <h4>Apr 2022 - Jul 2022</h4>
+        </div>
+        <div class="content">
+          <h3>Old Mutual Limited</h3>
+          <span>Full-stack developer, Intern</span>
+          <p>Developing a high architecture level based profile that consist of back-end and front-end developments, built with ASP.NET and Angular.</p>
         </div>
       </li>
     </ul>
-    <p *ngIf="errorMessage">{{errorMessage!.status +" "+ errorMessage!.statusText}}</p>
   </div>
 </section>

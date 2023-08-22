@@ -11,12 +11,13 @@ import { Observable } from 'rxjs';
 export class EducationComponent implements OnInit {
 
   person: Person = person;
+  loader: boolean = true;
   education!: Education[];
 
   constructor(private http: HttpService) { }
 
   ngOnInit(): void {
-    this.http.getEducation(this.person.id).subscribe((education: Education[]) => this.education = education);
+    this.http.getEducation(this.person.id).subscribe((education: Education[]) => { this.education = education; this.loader = false; });
   }
 
 }

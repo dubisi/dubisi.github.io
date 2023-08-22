@@ -9,11 +9,22 @@
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <link rel="icon" type="image/svg+xml" href="assets/favicon.svg">
   <link rel="icon" type="image/png" href="assets/favicon.png">
+
 </head>
 <body>
-  <div class="spinner-wrapper">
-    <div class="spinner"></div>
-  </div>
+  <div class="con"><div id="page-loading">
+  <img src="assets/favicon.svg">
+</div></div>
+  
   <app-root></app-root>
+  <script type="text/javascript">
+    document.addEventListener("DOMContentLoaded", function (event) {
+      /*VANILLA JAVASCRIPT*/
+      var element = document.getElementById("page-loading");
+      element.parentNode.removeChild(element);
+    });
+  </script>
 </body>
+
+
 </html>

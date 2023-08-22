@@ -12,6 +12,7 @@ import { HttpService } from '../http.service';
 export class SkillsComponent implements OnInit {
 
   person: Person = person;
+  loader: boolean = true;
   backEnd!: Skills[];
   frontEnd!: Skills[];
   mobile!: Skills[];
@@ -26,6 +27,7 @@ export class SkillsComponent implements OnInit {
       this.frontEnd = skill.filter((s) => s.skillSet == "front-end");
       this.mobile = skill.filter((s) => s.skillSet == "mobile");
       this.tools = skill.filter((s) => s.skillSet == "tools");
+      this.loader = false;
 
     }, error => {
       console.log(error);

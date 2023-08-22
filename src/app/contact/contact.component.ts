@@ -14,6 +14,7 @@ export class ContactComponent implements OnInit {
 
   person: Person = person;
   contacts!: Contacts[];
+  loader: boolean = true;
 
   faLocation = faLocationPin;
   faPhoneFlip = faPhoneFlip;
@@ -25,7 +26,9 @@ export class ContactComponent implements OnInit {
   constructor(private http: HttpService) { }
 
   ngOnInit(): void {
-    this.http.getContact(person.id).subscribe((contacts: Contacts[]) => this.contacts = contacts);
+    this.http.getContact(person.id).subscribe((contacts: Contacts[]) => {
+      this.contacts = contacts; this.loader = false;
+    });
   }
 
   gitHub(): string {

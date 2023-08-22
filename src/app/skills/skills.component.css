@@ -94,3 +94,20 @@
       padding-left: 0px;
     }
 }
+
+.loader {
+  height: 5px;
+  width: 100%;
+  overflow: hidden;
+}
+
+  .loader .bar {
+    position: relative;
+    height: 5px;
+    width: 100%;
+    background-color: #00ff66;
+    animation-name: loader-animation;
+    animation-duration: 3s;
+    animation-iteration-count: infinite;
+    animation-timing-function: ease-in-out;
+  }

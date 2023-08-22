@@ -12,6 +12,7 @@ import { AppComponent } from '../app.component';
 export class ExperienceComponent implements OnInit {
 
   person: Person = person;
+  loader: boolean = true;
   experience: Experience[] | [] = [];
   errorMessage: any;
 
@@ -19,7 +20,7 @@ export class ExperienceComponent implements OnInit {
   constructor(private http: HttpService) { }
 
   ngOnInit(): void {
-    this.http.getExperience(this.person.id).subscribe((experience: Experience[]) => this.experience = experience, error => {
+    this.http.getExperience(this.person.id).subscribe((experience: Experience[]) => { this.experience = experience; this.loader = false; }, error => {
       console.log(error);
       this.errorMessage = error;
     });

@@ -2,24 +2,29 @@
 <section id="about">
   <h4 class="title text-center">/about</h4>
 
+
   <div class="container p-4">
-    <div class="row row-cols-md-2 justify-content-center" *ngIf="about">
+    <div class="row row-cols-md-2 justify-content-center">
       <div class="col-lg-3 col-lg-4">
-        <div class="profile"><div class="frame"></div><img [src]="path+about.imagePath" class="img-fluid" alt="User profile picture" /></div>
+        <div class="profile"><div class="frame"></div><img src="../assets/dubisi.JPG" class="img-fluid" alt="User profile picture" /></div>
       </div>
 
       <div class="col-lg-4 col-lg-5">
         <div class="content-about">
           <h3>Hi,</h3>
-          <p>{{about.aboutMe}}</p>
+          <p>Demaind Ubisi is a full-stack developer with less than 1-year experience. My interest in tech started when I was at the university, 
+            where I was studying electrical engineering in computer systems. And during the course, I got introduced to programming, and I remember 
+            I wrote my first hello world in C++. I decided to switch careers to software development and always thrive on writing clean and reusable code. 
+            I am always eager to learn anything that helps me grow and solve problems.</p>
           <a class="btn btn-dark" [href]="cv" download="Demaind_Ubisi_CV.pdf">
             Download CV
           </a>
         </div>
       </div>
     </div>
-    <p *ngIf="errorMessage">{{errorMessage!.status +" "+ errorMessage!.statusText}}</p>
+
   </div>
+  <p *ngIf="errorMessage" class="container p-4">{{errorMessage!.status +" "+ errorMessage!.statusText}}</p>
 </section>
 
 <!--#54a546 / ti

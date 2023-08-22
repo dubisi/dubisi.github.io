@@ -21,16 +21,19 @@
     <div class="tab-pane fade show active" id="all" role="tabpanel" aria-labelledby="all-tab" tabindex="0">
       <div class="container">
         <div class="row row-cols-1 row-cols-lg-2 g-3 g-lg-3">
-          <ng-container *ngFor="let project of projects">
+          <ng-container>
             <div class="column">
               <div class="card">
                 <div class="card-header">
-                  {{project.languages}}
+                  Python
                 </div>
                 <div class="card-body">
-                  <h4 class="card-title">{{project.name}}</h4>
-                  <p class="card-text">{{project.description}}</p>
-                  <div class="icon"><a [href]="project.link" [target]="'_blank'" title="github"><fa-icon [icon]="faGitHub"></fa-icon></a><a [href]="project.externalLink" [target]="'_black'" title="external-link"><fa-icon [icon]="faExternal"></fa-icon></a></div>
+                  <h4 class="card-title">Recursive Backtracking Maze</h4>
+                  <p class="card-text">GUI-based (turtle interface). This algorithm creates a new maze from a grid of cells. 
+                    A random starting cell is chosen and marked as visited. Then it repeats the following steps:  If there are unvisited neighbors, 
+                    choose a random one and remove the wall between them. Mark the new cell as visited, and if all neighbors have been marked as visited, 
+                    back up until finding a cell that has unvisited neighbors.</p>
+                  <div class="icon"><a [href]="link" [target]="'_blank'" title="github"><fa-icon [icon]="faGitHub"></fa-icon></a><a [href]="externalLink" [target]="'_black'" title="external-link"><fa-icon [icon]="faExternal"></fa-icon></a></div>
                 </div>
               </div>
             </div>
